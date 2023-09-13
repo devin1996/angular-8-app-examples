@@ -2,10 +2,6 @@
 <button>Time Line 2</button>
 <button>Time Line 3</button>
 
-<div *ngIf="!isLoggedIn">
+<div>
   <timeline-one></timeline-one>
 </div>
-
-<div *ngIf="isLoggedIn && !isNewUser">Welcome back, friend.</div>
-
-<div *ngIf="isLoggedIn || isNewUser">Welcome!</div>
