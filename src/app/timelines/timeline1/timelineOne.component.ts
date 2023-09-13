@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'timeline-one',
+  templateUrl: './timelineOne.component.html',
+  styleUrls: ['./timelineOne.component.css'],
 })
 export class TimelineOneComponent {
   name = 'Angular';

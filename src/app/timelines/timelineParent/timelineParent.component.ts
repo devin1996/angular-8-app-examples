@@ -5,6 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './timelineParent.component.html',
   styleUrls: ['./timelineParent.component.css'],
 })
+
 export class TimelineParent {
-  name = 'Angular';
+
+  buttonSelection = 'Angular';
+
+  openTimeLine(){
+        
+  }
+
 }
