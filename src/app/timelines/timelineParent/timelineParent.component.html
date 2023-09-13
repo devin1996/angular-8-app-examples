@@ -1,0 +1,11 @@
+<div *ngIf="!isLoggedIn">
+Please login, friend.
+</div>
+
+<div *ngIf="isLoggedIn && !isNewUser">
+Welcome back, friend.
+</div>
+
+<div *ngIf="isLoggedIn || isNewUser">
+Welcome!
+</div>
