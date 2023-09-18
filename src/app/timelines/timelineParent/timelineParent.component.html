@@ -1,7 +1,47 @@
-<!-- <button (click)="openTimeLine('firstOne')">Time Line one</button>
-<button>Time Line 2</button>
-<button>Time Line 3</button> -->
+<div style="margin-bottom:5px">
+  <button (click)="openTimeLine('firstOne')">Zoom In</button>
+  <button (click)="openTimeLine('firstOne')">Zoom Out</button>
+
+  <button>Append</button>
+  <button>Trim</button>
+
+  <label>Length : </label>
+  <input type="number" style="width:20px" />
+  <button>Set</button>
+
+  <label> Simulation Time : </label>
+  <!-- Have to get the simulation time in here -->
+
+  <input type="number" style="width:20px" />
+  <label> h </label>
+  <input type="number" style="width:20px" />
+  <label> m </label>
+  <input type="number" style="width:20px" />
+  <label> s </label>
+  <button>H hour</button>
+
+  <button (click)="openTimeLine('firstOne')">D</button>
+  <button (click)="openTimeLine('firstOne')">call</button>
+</div>
 
 <div>
   <vis-timeline></vis-timeline>
+</div>
+
+<div>
+  <button>Add FLine</button>
+  <button>Add CLine</button>
+  <button>Validate</button>
+  <button>Activate</button>
+  <button>Check All</button>
+  <button>Stop F</button>
+  <button>Clear All</button>
+  <button>Delete Selected</button>
+  <button>Import</button>
+  <button>Export</button>
+  <button>Extend</button>
+  <button>Substract</button>
+
+  <input type="checkbox" id="" name="" value="" />
+  <label for="vehicle3">Show All T Names</label><br />
 </div>
