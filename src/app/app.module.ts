@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { TimelineParent } from './timelines/timelineParent/timelineParent.component';
 import { TimelineOneComponent } from './timelines/timeline1/timelineOne.component';
+import { VisTimelineComponent } from './timelines/vis-timeline/visTimeline.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -14,6 +15,7 @@ import { TimelineOneComponent } from './timelines/timeline1/timelineOne.componen
     HelloComponent,
     TimelineOneComponent,
     TimelineParent,
+    VisTimelineComponent,
   ],
   bootstrap: [AppComponent],
 })
