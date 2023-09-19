@@ -1,6 +1,6 @@
 <div style="margin-bottom:5px">
-  <button (click)="openTimeLine('firstOne')">Zoom In</button>
-  <button (click)="openTimeLine('firstOne')">Zoom Out</button>
+  <button (click)="zoomIn()">Zoom In</button>
+  <button (click)="zoomOut()">Zoom Out</button>
 
   <button>Append</button>
   <button>Trim</button>
@@ -30,7 +30,7 @@
   <button>Add FLine</button>
   <button>Add CLine</button>
   <button>Validate</button>
-  <button>Activate</button>
+  <button (click)="activateTimeline()">Activate</button>
   <button>Check All</button>
   <button>Stop F</button>
   <button>Clear All</button>

@@ -88,14 +88,24 @@ export class VisTimelineComponent implements OnInit {
         item: true,
         range: true,
       },
-      rollingMode: {
-        //follow: true,
-        //offset: '0',
-      },
+      // rollingMode: {
+      //   follow: true,
+      //   offset: 1,
+      // },
       showCurrentTime: true,
       showTooltips: true,
       moveable: true,
+      zoomMin: 1000 * 60 * 60 * 24, // one day in milliseconds
+      zoomMax: 1000 * 60 * 60 * 24 * 31 * 3, // about three months in milliseconds
     };
+  }
+
+  zoomIn() {
+    this.timeline.zoomIn(0.2);
+  }
+
+  zoomOut() {
+    this.timeline.zoomOut(0.2);
   }
 
   activateTimeline() {
