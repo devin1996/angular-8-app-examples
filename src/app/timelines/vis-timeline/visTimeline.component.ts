@@ -97,4 +97,8 @@ export class VisTimelineComponent implements OnInit {
       moveable: true,
     };
   }
+
+  activateTimeline() {
+    this.timeline.toggleRollingMode();
+  }
 }
