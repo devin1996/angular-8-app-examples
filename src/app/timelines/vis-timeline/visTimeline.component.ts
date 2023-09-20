@@ -26,6 +26,7 @@ export class VisTimelineComponent implements OnInit {
     this.timeline = new Timeline(
       this.timelineContainer.nativeElement,
       null,
+      null,
       this.options
     );
     this.timeline.setGroups(this.groups);
@@ -65,25 +66,23 @@ export class VisTimelineComponent implements OnInit {
   // setting time line options
   getOptions() {
     this.options = {
-      stack: true,
-      start: 0,
-      end: 10,
-      // timeAxis: {
-      //   scale: 'hour',
-      //   step: 5,
-      // },
+      timeAxis: { scale: 'minute', step: 5 },
+      orientation: { axis: 'top' },
+      // stack: true,
+      // start: 0,
+      // end: 10,
       //itemsAlwaysDraggable: true,
       //editable: true,
-      margin: {
-        axis: 0,
-      },
-      showMajorLabels: true,
-      orientation: 'top',
+      // margin: {
+      //   axis: 0,
+      // },
+      // showMajorLabels: true,
+      // orientation: 'top',
       //clickToUse: true,
-      editable: {
-        remove: true,
-        add: true,
-      },
+      // editable: {
+      //   remove: true,
+      //   add: true,
+      // },
       itemsAlwaysDraggable: {
         item: true,
         range: true,
@@ -92,11 +91,9 @@ export class VisTimelineComponent implements OnInit {
       //   follow: true,
       //   offset: 1,
       // },
-      showCurrentTime: true,
-      showTooltips: true,
-      moveable: true,
-      zoomMin: 1000 * 60 * 60 * 24, // one day in milliseconds
-      zoomMax: 1000 * 60 * 60 * 24 * 31 * 3, // about three months in milliseconds
+      // showCurrentTime: true,
+      // showTooltips: true,
+      // moveable: true,
     };
   }
 
