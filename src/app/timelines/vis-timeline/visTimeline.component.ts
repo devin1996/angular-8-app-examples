@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { Timeline } from 'vis-timeline';
 import { DataSet } from 'vis-data';
+import moment from 'moment';
 
 @Component({
   selector: 'vis-timeline',
@@ -26,7 +27,6 @@ export class VisTimelineComponent implements OnInit {
     this.timeline = new Timeline(
       this.timelineContainer.nativeElement,
       null,
-      null,
       this.options
     );
     this.timeline.setGroups(this.groups);
@@ -38,6 +38,7 @@ export class VisTimelineComponent implements OnInit {
       {
         id: 0,
         content: 'Group 1',
+        title: 'Just For Hover G',
       },
       {
         id: 1,
@@ -51,51 +52,42 @@ export class VisTimelineComponent implements OnInit {
     this.data.add({
       id: 1,
       group: 0,
-      content: 'item 1',
-      start: 0,
-      end: 2,
-      //type: 'box',
-      editable: {
-        remove: true,
-        updateGroup: true,
-        updateTime: true,
-      },
+      content: 'CAS1',
+      start: new Date(2023, 8, 21),
+      end: new Date(2023, 8, 22),
+      title: 'Just For Hover',
     });
   }
 
   // setting time line options
   getOptions() {
     this.options = {
-      timeAxis: { scale: 'minute', step: 5 },
       orientation: { axis: 'top' },
-      // stack: true,
-      // start: 0,
-      // end: 10,
-      //itemsAlwaysDraggable: true,
-      //editable: true,
-      // margin: {
-      //   axis: 0,
-      // },
-      // showMajorLabels: true,
-      // orientation: 'top',
-      //clickToUse: true,
-      // editable: {
-      //   remove: true,
-      //   add: true,
-      // },
+      start: moment().subtract(10, 'm').toISOString(),
+      end: moment().add(40, 'm').toISOString(),
+      editable: {
+        remove: true,
+        add: true,
+        updateTime: true,
+      },
       itemsAlwaysDraggable: {
         item: true,
-        range: true,
       },
-      // rollingMode: {
-      //   follow: true,
-      //   offset: 1,
-      // },
-      // showCurrentTime: true,
-      // showTooltips: true,
-      // moveable: true,
+      max: new Date(2023, 10, 21),
+      min: new Date(2023, 8, 20),
+      rollingMode: {
+        follow: true,
+      },
+      showWeekScale: true,
+      showTooltips: true,
+      timeAxis: { scale: 'minute', step: 1 },
+      //zoomMax: 3600000,
+      //zoomMin: 30000, // 30 secs
+      //moment:
     };
   }
+
+  addCustomTime() {}
 
   zoomIn() {
     this.timeline.zoomIn(0.2);
