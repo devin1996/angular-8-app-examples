@@ -1,13 +1,13 @@
 <div style="margin-bottom:5px">
   <button (click)="zoomIn()">Zoom In</button>
-  <button (click)="zoomOut()">Zoom Out</button>
+  <button style="margin-left: 5px" (click)="zoomOut()">Zoom Out</button>
 
-  <button>Append</button>
-  <button>Trim</button>
+  <button style="margin-left: 5px">Append</button>
+  <button style="margin-left: 5px">Trim</button>
 
   <label>Length : </label>
-  <input type="number" style="width:20px" />
-  <button>Set</button>
+  <input type="number" style="width:20px; margin-left: 5px" />
+  <button style="margin-left: 5px">Set</button>
 
   <label> Simulation Time : </label>
   <!-- Have to get the simulation time in here -->
@@ -20,26 +20,64 @@
   <label> s </label>
   <button>H hour</button>
 
-  <button (click)="openTimeLine('firstOne')">D</button>
+  <button (click)="openTimeLine('firstOne')" style="margin-left: 5px">D</button>
   <button (click)="openTimeLine('firstOne')">call</button>
 </div>
 
 <div #timeline id="”timeline”"></div>
 
-<div>
+<div style="margin-top: 10px">
   <button>Add FLine</button>
-  <button>Add CLine</button>
-  <button>Validate</button>
-  <button (click)="activateTimeline()">Activate</button>
-  <button>Check All</button>
-  <button>Stop F</button>
-  <button>Clear All</button>
-  <button>Delete Selected</button>
-  <button>Import</button>
-  <button>Export</button>
-  <button>Extend</button>
+  <button style="margin-left: 5px">Add CLine</button>
+  <button style="margin-left: 5px">Validate</button>
+  <button style="margin-left: 5px" (click)="activateTimeline()">
+    Activate
+  </button>
+  <button style="margin-left: 5px">Check All</button>
+  <button style="margin-left: 5px">Stop F</button>
+  <button style="margin-left: 5px">Clear All</button>
+  <button style="margin-left: 5px">Delete Selected</button>
+  <button style="margin-left: 5px">Import</button>
+  <button style="margin-left: 5px">Export</button>
+  <button style="margin-left: 5px">Extend</button>
   <button>Substract</button>
 
   <input type="checkbox" id="" name="" value="" />
-  <label for="vehicle3">Show All T Names</label><br />
+  <label>Show All T Names</label><br />
+</div>
+
+<div style="margin-top: 25px">
+  <button style="margin-left: 5px" (click)="destroyTimeline()">Destroy</button>
+  <button style="margin-left: 5px" (click)="fit()">Fit</button>
+  <button style="margin-left: 5px" (click)="focus()">Focus</button>
+  <button style="margin-left: 5px" (click)="getCurrentTime()">
+    Current Time
+  </button>
+
+  <button style="margin-left: 5px" (click)="getCustomTime()">
+    Custom Time
+  </button>
+  <button style="margin-left: 5px" (click)="getEventProperties()">
+    Event Properties
+  </button>
+  <button style="margin-left: 5px" (click)="getItemRange()">Item Range</button>
+  <button style="margin-left: 5px" (click)="getSelection()">Selection</button>
+  <button style="margin-left: 5px" (click)="getVisibleItems()">
+    Visible Items
+  </button>
+  <button style="margin-left: 5px" (click)="getWindow()">Window</button>
+</div>
+
+<div>
+  <p>{{ currentTime }}</p>
+  <p>{{ customTime }}</p>
+  <p>{{ eventProperties }}</p>
+  <p>{{ itemRange }}</p>
+  <p>{{ selection }}</p>
+  <p>{{ visibleItems }}</p>
+  <p>{{ window }}</p>
+</div>
+
+<div style="margin-top: 25px">
+  <button style="margin-left: 5px" (click)="clickOn()">Click Event</button>
 </div>
