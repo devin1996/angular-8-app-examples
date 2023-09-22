@@ -4,6 +4,7 @@ import { Timeline } from 'vis-timeline';
 import { DataSet } from 'vis-data';
 import moment from 'moment';
 
+// Ref https://visjs.github.io/vis-timeline/docs/timeline/
 @Component({
   selector: 'vis-timeline',
   templateUrl: './visTimeline.component.html',
@@ -164,7 +165,9 @@ export class VisTimelineComponent implements OnInit {
 
   //Didn't completed
   clickOn() {
-    this.timeline.on('select', onSelect);
+    this.timeline.on('select', function () {
+      alert('selected items: ');
+    });
   }
 
   onSelect(properties) {
