@@ -13,17 +13,28 @@ import {
   styleUrls: ['./animationTimeline.component.css'],
 })
 export class AnimationTimelineComponent implements OnInit {
+  timeline: Timeline;
+
   @ViewChild('timeline', { static: true }) timelineContainer: ElementRef;
 
   ngOnInit() {
     const model = { rows: [] as Array<TimelineRow> } as TimelineModel;
     const options = {
       id: 'timeline',
+      headerFillColor: 'GREY',
       rowsStyle: {
         height: 35,
       } as TimelineRowStyle,
     } as TimelineOptions;
 
-    const timeline = new Timeline(options, model);
+    this.timeline = new Timeline(options, model);
+  }
+
+  zoomIn() {
+    this.timeline.zoomIn(0.5);
+  }
+
+  zoomOut() {
+    this.timeline.zoomOut(0.5);
   }
 }
