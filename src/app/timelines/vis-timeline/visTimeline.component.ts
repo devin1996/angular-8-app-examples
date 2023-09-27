@@ -72,7 +72,11 @@ export class VisTimelineComponent implements OnInit {
   // setting time line options
   getOptions() {
     this.options = {
+      rollingMode: {
+        follow: false,
+      },
       orientation: { axis: 'top' },
+      pause: true,
       start: moment().subtract(10, 'm').toISOString(),
       end: moment().add(40, 'm').toISOString(),
       editable: {
@@ -85,9 +89,6 @@ export class VisTimelineComponent implements OnInit {
       },
       max: new Date(2023, 10, 21),
       min: new Date(2023, 8, 20),
-      rollingMode: {
-        follow: true,
-      },
       showWeekScale: false,
       showCurrentTime: true,
       showTooltips: true,
@@ -141,6 +142,10 @@ export class VisTimelineComponent implements OnInit {
     //   var props = timeline.getEventProperties(event)
     //   console.log(props);
     // }
+  }
+
+  stopTimeline() {
+    this.timeline.stopCurrentTime(); // This stops the current time indicator line
   }
 
   getItemRange() {

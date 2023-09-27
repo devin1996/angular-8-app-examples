@@ -7,6 +7,7 @@ import { HelloComponent } from './hello.component';
 import { TimelineParent } from './timelines/timelineParent/timelineParent.component';
 import { TimelineOneComponent } from './timelines/timeline1/timelineOne.component';
 import { VisTimelineComponent } from './timelines/vis-timeline/visTimeline.component';
+import { AnimationTimelineComponent } from './timelines/animation-timeline/animationTimeline.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -16,6 +17,7 @@ import { VisTimelineComponent } from './timelines/vis-timeline/visTimeline.compo
     TimelineOneComponent,
     TimelineParent,
     VisTimelineComponent,
+    AnimationTimelineComponent,
   ],
   bootstrap: [AppComponent],
 })
