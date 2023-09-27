@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ElementRef } from '@angular/core';
+import { Timeline } from 'vis-timeline';
 import { DataSet } from 'vis-data';
-import * as vis from 'vis-timeline';
 
 @Component({
   selector: 'timeline-one',
@@ -8,28 +9,108 @@ import * as vis from 'vis-timeline';
   styleUrls: ['./timelineOne.component.scss'],
 })
 export class TimelineOneComponent implements OnInit {
-  ngOnInit(): void {
-    const container = document.getElementById('timeline-container');
+  timeline: Timeline;
+  options: {};
+  data: any;
+  groups: any;
 
-    const items = new DataSet([
-      { id: 1, content: 'Event 1', start: 10 },
-      { id: 2, content: 'Event 2', start: 30 },
-    ]);
+  @ViewChild('timeline', { static: true }) timelineContainer: ElementRef;
 
-    const groups = new DataSet([{ id: 1, content: 'Group 1' }]);
+  constructor() {
+    this.getTimelineData();
+    this.getTimelineGroups();
+    this.getOptions();
+  }
 
-    const options = {
-      start: 0,
-      end: 50,
-      format: {
-        minorLabels: {
-          custom: (date, scale, step) => {
-          return date; // Return the numeric value as the label
-          },
-        },
+  ngOnInit() {
+    this.timeline = new Timeline(
+      this.timelineContainer.nativeElement,
+      null,
+      this.options
+    );
+    this.timeline.setGroups(this.groups);
+    this.timeline.setItems(this.data);
+  }
+
+  getTimelineGroups() {
+    this.groups = new DataSet([
+      {
+        id: 0,
+        content: 'Group 1',
       },
-    };
+      {
+        id: 1,
+        content: 'Group 2',
+      },
+    ]);
+  }
 
-    const timeline = new vis.Timeline(container, items, groups, options);
+  getTimelineData() {
+    this.data = new DataSet();
+    this.data.add({
+      id: 1,
+      group: 0,
+      content: 'item 1',
+      start: 0,
+      end: 2,
+      //type: 'box',
+      editable: {
+        remove: true,
+        updateGroup: true,
+        updateTime: true,
+      },
+    });
+  }
+
+  items: [
+    {},
+    {
+      start: 5;
+      end: 15;
+      content: 'Item 2';
+    }
+  ];
+  // setting time line options
+  getOptions() {
+    this.options = {
+      // timeAxis: true,
+      // timeAxisScale: 'number',
+
+      timeAxis: true,
+      timeAxisScale: 'number',
+      start: -10,
+      end: 10,
+      zoomKey: null,
+      // stack: true,
+      // start: 0,
+      // end: 10,
+      // timeAxis: {
+      //   scale: 'hour',
+      //   step: 5,
+      // },
+      //itemsAlwaysDraggable: true,
+      //editable: true,
+      // margin: {
+      //   axis: 0,
+      // },
+      // showMajorLabels: true,
+      // orientation: 'top',
+      //clickToUse: true,
+      // editable: {
+      //   remove: true,
+      //   add: true,
+      // },
+      // itemsAlwaysDraggable: {
+      //   item: true,
+      //   range: true,
+      // },
+      // rollingMode: {
+      //   //follow: true,
+      //   //offset: '0',
+      // },
+      // showCurrentTime: true,
+      // showTooltips: true,
+      // moveable: true,
+    };
   }
 }
