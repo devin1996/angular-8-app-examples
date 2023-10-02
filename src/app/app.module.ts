@@ -8,6 +8,7 @@ import { TimelineParent } from './timelines/timelineParent/timelineParent.compon
 import { TimelineOneComponent } from './timelines/timeline1/timelineOne.component';
 import { VisTimelineComponent } from './timelines/vis-timeline/visTimeline.component';
 import { AnimationTimelineComponent } from './timelines/animation-timeline/animationTimeline.component';
+import { ClockComponent } from './clock/clock.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -18,6 +19,7 @@ import { AnimationTimelineComponent } from './timelines/animation-timeline/anima
     TimelineParent,
     VisTimelineComponent,
     AnimationTimelineComponent,
+    ClockComponent,
   ],
   bootstrap: [AppComponent],
 })
