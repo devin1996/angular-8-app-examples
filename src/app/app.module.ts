@@ -9,9 +9,21 @@ import { TimelineOneComponent } from './timelines/timeline1/timelineOne.componen
 import { VisTimelineComponent } from './timelines/vis-timeline/visTimeline.component';
 import { AnimationTimelineComponent } from './timelines/animation-timeline/animationTimeline.component';
 import { ClockComponent } from './clock/clock.component';
+import { DialogComponent } from './dialog/dialog-component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    // MatFormFieldModule,
+    // MatDialogModule,
+    // MatInputModule,
+    // MatChipsModule,
+  ],
   declarations: [
     AppComponent,
     HelloComponent,
@@ -20,6 +32,7 @@ import { ClockComponent } from './clock/clock.component';
     VisTimelineComponent,
     AnimationTimelineComponent,
     ClockComponent,
+    DialogComponent,
   ],
   bootstrap: [AppComponent],
 })
