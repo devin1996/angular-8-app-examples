@@ -15,7 +15,7 @@ export class ClockComponent implements OnInit {
   ngOnInit(): void {
     this.clockHandle = setInterval(() => {
       this.clock = new Date().toLocaleString();
-      console.log('Hi');
+      //console.log('Hi');
     }, 1000);
   }
 }
