@@ -95,6 +95,7 @@ export class VisTimelineComponent implements OnInit {
       timeAxis: { scale: 'minute', step: 1 },
       zoomMax: 900000,
       zoomMin: 60000, // 1 min
+      //onAdd: (item, callback) => {},
     };
   }
 
