@@ -88,7 +88,7 @@ export class VisTimelineComponent implements OnInit {
         item: true,
       },
       max: new Date(2023, 10, 21),
-      min: new Date(2023, 8, 20),
+      min: new Date(2023, 10, 20),
       showWeekScale: false,
       showCurrentTime: true,
       showTooltips: true,
