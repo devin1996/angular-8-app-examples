@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'ngx-data-table',
   templateUrl: './ngxDataTable.component.html',
+  styleUrls: ['./ngxDataTable.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ngxDataTableComponent {
   //gender: string;

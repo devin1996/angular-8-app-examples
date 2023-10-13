@@ -15,6 +15,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
 import { ngxDataTableComponent } from './data-table/ngx-data-table/ngxDataTable.component';
+import { TableFilterPipe } from './data-table/ngx-data-table/table-filter.pipe';
 
 @NgModule({
   imports: [
@@ -35,6 +36,7 @@ import { ngxDataTableComponent } from './data-table/ngx-data-table/ngxDataTable.
     ClockComponent,
     DialogComponent,
     ngxDataTableComponent,
+    TableFilterPipe,
   ],
   bootstrap: [AppComponent],
 })

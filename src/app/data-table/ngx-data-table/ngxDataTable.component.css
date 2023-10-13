@@ -1,0 +1,11 @@
+p {
+  font-family: Lato;
+}
+
+.myClass {
+  background: #ff0000;
+}
+
+.actions a {
+  padding: 6px;
+}
