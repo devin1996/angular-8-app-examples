@@ -1,0 +1,27 @@
+<div class="container">
+  <table class="table table-bordered">
+    <thead>
+      <th></th>
+      <th>No.</th>
+      <th>Asset</th>
+      <th>Platforms</th>
+      <th>CheckFire</th>
+    </thead>
+
+    <tbody>
+      <!-- <tr *ngFor="let tableData of tableData | tableFilter: gender"> -->
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>{{ tableData.no }}</td>
+        <td>
+          <select class="form-control">
+            <option value="male">Battery</option>
+            <option value="female">Aircaft</option>
+          </select>
+        </td>
+        <td>{{ tableData.platforms }}</td>
+        <td><input type="checkbox" /></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -14,6 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
+import { ngxDataTableComponent } from './data-table/ngx-data-table/ngxDataTable.component';
 
 @NgModule({
   imports: [
@@ -33,6 +34,7 @@ import { MatChipsModule } from '@angular/material/chips';
     AnimationTimelineComponent,
     ClockComponent,
     DialogComponent,
+    ngxDataTableComponent,
   ],
   bootstrap: [AppComponent],
 })
