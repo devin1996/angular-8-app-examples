@@ -25,6 +25,28 @@ export class ngxDataTableComponent {
   //   });
   // }
 
+  title = 'table-tutorial';
+  rows = [
+    {
+      name: 'mercy',
+      age: 10,
+      town: 'Nairobi',
+      country: 'kenya',
+    },
+    {
+      name: 'Vincent',
+      age: 40,
+      town: 'Kampala',
+      country: 'Uganda',
+    },
+    {
+      name: 'Wesley',
+      age: 41,
+      town: 'Cairo',
+      country: 'Egypt',
+    },
+  ];
+
   data = [];
   columns = [{ name: 'Name' }, { name: 'Age' }, { name: 'Country' }];
 
