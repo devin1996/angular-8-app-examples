@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <table class="table table-bordered">
     <thead>
       <th></th>
@@ -23,4 +23,18 @@
       </tr>
     </tbody>
   </table>
+</div> -->
+
+<div>
+  <button (click)="addNewRow()">Add New Row</button>
 </div>
+
+<ngx-datatable
+  class="material"
+  [rows]="data"
+  [columns]="columns"
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="50"
+></ngx-datatable>

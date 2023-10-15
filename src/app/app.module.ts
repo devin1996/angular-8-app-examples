@@ -16,11 +16,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
 import { ngxDataTableComponent } from './data-table/ngx-data-table/ngxDataTable.component';
 import { TableFilterPipe } from './data-table/ngx-data-table/table-filter.pipe';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
+    NgxDatatableModule,
+    NgbModule,
     // MatFormFieldModule,
     // MatDialogModule,
     // MatInputModule,
