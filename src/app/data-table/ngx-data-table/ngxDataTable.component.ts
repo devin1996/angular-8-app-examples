@@ -1,4 +1,9 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  ViewChild,
+  ViewEncapsulation,
+} from '@angular/core';
 
 @Component({
   selector: 'ngx-data-table',
@@ -25,7 +30,8 @@ export class ngxDataTableComponent {
   //   });
   // }
 
-  title = 'table-tutorial';
+  @ViewChild('datatableTeaching', { static: true }) table;
+
   rows = [
     {
       name: 'mercy',
@@ -47,18 +53,14 @@ export class ngxDataTableComponent {
     },
   ];
 
-  data = [];
-  columns = [{ name: 'Name' }, { name: 'Age' }, { name: 'Country' }];
-
-  constructor() {}
-
-  ngOnInit() {
-    // Initialize your data here (empty array in this example).
-    this.data = [];
-  }
-
   addNewRow() {
     // Add a new empty row to the data array.
-    this.data.push({});
+    this.rows.push({
+      name: 'x',
+      age: 10,
+      town: 'x',
+      country: 'x',
+    });
+    this.rows = [...this.rows];
   }
 }
