@@ -14,6 +14,9 @@ import { ngxDataTableComponent } from './data-table/ngx-data-table/ngxDataTable.
 import { TableFilterPipe } from './data-table/ngx-data-table/table-filter.pipe';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { nebularComponent } from './nebular/nebular.component';
+import { nebularDialogComponent } from './nebular/nebularDialog/nebularDialog.component';
+import { NbWindowModule } from '@nebular/theme';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, NgxDatatableModule, NgbModule],
